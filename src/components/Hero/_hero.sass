@@ -1,0 +1,48 @@
+.hero-wrap
+    display: flex
+    height: 760px
+
+.hero-left
+    flex-basis: 60%
+    margin-left: auto
+    display: flex
+    justify-content: flex-start
+
+.hero-list-down
+    align-self: center
+
+.hero-list-down:hover
+    transform: scale(1.1)
+    transition: .4s ease-in-out   
+
+.hero-right
+    flex-basis: 40%
+    margin-right: auto
+    margin-top: 20px
+    
+
+.hero-right h1
+    display: flex
+    flex-direction: column
+    +bold
+    font-size: 80px
+    line-height: 1
+
+    & p
+        margin: 0 200px 0 auto
+
+.hero-right h3
+    display: flex
+    flex-direction: column
+    +regular
+    font-size: 30px 
+    line-height: 1
+    margin-bottom: 50px
+
+    & p
+        margin: 0 200px 0 auto
+
+.hero-btn
+    @extend .button-size-4
+    @extend .button-orange
+    margin: 0 0 0 190px

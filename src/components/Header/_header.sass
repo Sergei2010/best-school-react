@@ -1,0 +1,152 @@
+.header-wrap
+    display: flex
+    justify-content: space-around
+    align-items: center
+    min-height: 100px
+
+.header-info
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    flex-basis: 50%
+    
+.logo-img
+    margin: auto 0 auto 0
+
+.logo-info
+    margin: auto 30px auto 0
+    +regular
+    font-size: 22px
+    color: #b0bbd1
+
+.logo-city
+    margin: auto 0 auto 30px
+    +light
+    font-size: 20px
+    color: #b0bbd1
+    padding-left: 30px
+    border-left: 1px solid #596a89
+
+
+.logo-city p
+    +light
+    font-size: 11px
+    color: #7286aa
+
+.logo-city nav ul
+    list-style: none
+    margin: 0
+    padding: 0
+
+.logo-city nav a
+    text-decoration: none
+    color: #c4cad4
+    outline: none
+    display: block
+    transition: .4s ease-in-out
+
+.topmenu
+    text-align: left
+    padding: 10px 0
+
+.topmenu img
+    margin-left: 16px
+    margin-bottom: 3px
+    display: block
+
+.topmenu > li
+    display: inline-block
+    position: relative
+
+.topmenu > li:after
+    content: ""
+    position: absolute
+    right: 0
+    width: 1px
+    height: 12px
+    background: #ffff
+    top: 16px
+    box-shadow: 4px -2px 0 #d2d2d2
+    transform: rotate(30deg)
+
+.topmenu > li:last-child:after
+    background: none
+    box-shadow: none
+
+.topmenu > li > a
+    color: #bbc4d5
+    text-transform: uppercase
+    letter-spacing: 1px
+
+.topmenu a:hover
+    color: #af7326
+    text-decoration: underline
+    & img
+        transform: rotate(180deg)
+        transition: .4s ease-in-out   
+
+
+.submenu
+    margin-top: 10px
+    position: absolute
+    left: 50%
+    top: 100%
+    width: 200px
+    margin-left: -105px
+    background: #ffff
+    border: 1px solid #ededed
+    z-index: 5
+    visibility: hidden
+    opacity: 0
+    transform: scale(.8)
+    transition: .4s ease-in-out
+
+.submenu li a 
+    padding: 10px 0
+    margin: 0 10px
+    border-bottom: 1px solid #efefef
+    font-size: 16px
+    color: #484848
+
+.topmenu > li:hover .submenu 
+    visibility: visible
+    opacity: 1
+    transform: scale(1)
+
+.header-phone
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    flex-basis: 50%
+
+.phone-icon
+    width: 60px
+    height: 60px
+    margin: auto 0 auto 0
+    display: flex
+    justify-content: center
+    background: url("../img/header/circle.png") center no-repeat
+    background-size: cover
+
+.phone-icon a
+    display: flex
+
+.phone-icon a img
+    margin: auto
+    
+.phone-num
+    +regular
+    font-size: 22px
+    color: #b0bbd1
+    margin: 0 30px auto 30px
+
+.phone-num span
+    +light
+    font-size: 11px
+    color: #7286aa
+    margin-left: 10px
+
+.header-phone-btn
+    @extend .button-size-1
+    @extend .button-transparent
+    margin: auto 30px

@@ -1,0 +1,111 @@
+$orange: #fa9300;
+$blue: #73b4ed;
+$dark-blue: #2d3f60;
+$gray: #7e7465;
+$transparent: transparent;
+$white: #fff5e8;
+
+%button {
+	display: inline-block;
+	border: none;
+	text-decoration: none;
+	text-align: center;
+	position: relative;
+	outline: none;
+	transition: background-color .1s ease;
+	cursor: pointer;    
+}
+@mixin color($property) {
+	&::after {
+		transition: background-color .2s ease;
+		position: absolute;
+		content: '';
+		width: 100%;
+		background-color: darken($property, 50%);
+		opacity: .18;
+		border-bottom-left-radius: 2px;
+		border-bottom-right-radius: 2px;
+		left: 0;
+	}
+	&:focus, &:hover {
+		text-decoration: none;
+		color: $white;
+	}
+	&:hover {
+		background-color: lighten($property, 5%);
+	}	
+	&::after {
+		opacity: .22;
+	}
+	&:active {
+		background-color: darken($property, 5%);
+	}	
+	&::after {
+		opacity: .32;
+	}
+}
+
+.button-size-1 {
+	@extend %button;
+    width: 228px;
+	height: 60px;
+    border-radius: 30px;
+}
+
+.button-size-2 {
+	@extend %button;
+    width: 300px;
+	height: 70px;
+    border-radius: 35px;
+	@include semi-bold();
+	font-size: 18px;
+}
+
+.button-size-3 {
+	@extend %button;
+    width: 320px;
+	height: 70px;
+    border-radius: 35px;
+	@include semi-bold();
+	font-size: 18px;
+}
+
+.button-size-4 {
+	@extend %button;
+    width: 350px;
+	height: 90px;
+    border-radius: 45px;
+	@include semi-bold();
+}
+
+.button-size-5 {
+	@extend %button;
+    width: 360px;
+	height: 70px;
+    border-radius: 35px;
+	font-size: 18px;
+	@include semi-bold();
+}
+
+.button-orange {
+    color: $white;
+	background: $orange;
+	transition: all .3s ease;
+	@include color($orange);
+}
+
+.button-blue {
+    color: $white;
+	background: $blue;
+	transition: all .3s ease;
+	@include color($blue);
+}
+	
+.button-transparent {
+    color: $text-color;
+	background: $transparent;
+    border: 2px solid $orange;
+	transition: all .3s ease;
+	@include color($dark-blue);
+}
+	

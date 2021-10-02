@@ -1,0 +1,107 @@
+.month-of-study
+    margin-top: 0
+    background: url("../img/month-of-study/month-of-study-bg.png") no-repeat
+    background-size: auto cover
+    background-position: 50% 20% 
+    margin-top: 40px
+    background: url("../img/month-of-study/month-of-study-bg.png") no-repeat
+    background-size: auto cover
+    background-position: 50% 30%
+
+.month-of-study-wrap
+    width: 1140px
+    height: 1500px
+    margin: 0 auto
+    padding-top: 254px
+
+    .month-of-study-grid
+        margin: 0 auto
+        align-items: center
+        text-align: center
+        margin-top: 0
+        margin-top: -60px
+        display: grid
+        grid-template-areas: "header" "info" "footer" "btn"
+        grid-template-rows: 1fr 2fr 1fr 1fr
+        grid-template-columns: 1fr 
+        grid-gap: 5px
+
+        &-header
+            grid-area: header
+            +bold
+            font-size: 65px
+            color: #ffffff
+
+        &-header span:nth-child(2)
+            color: #fa9300
+
+        &-header p
+            +regular
+            font-size: 22px
+            color: #e0e4ec
+
+        &-info
+            grid-area: info
+            margin-top: -50px
+            
+        &-slider
+            display: flex
+            justify-content: center
+
+        &-slider-main
+            width: 945px
+            height: 520px
+            background: url("../img/month-of-study/month-of-study-grid-slider-main-bg.png") center no-repeat
+            background-size: cover
+
+        &-slider-left
+            margin-right: -48px
+            margin-top: 18%
+            
+        &-slider-right
+            margin-left: -68px
+            margin-top: 18%
+
+        &-slider-bottom
+            margin-top: -55px
+
+        &-slider-right a img:hover,
+        &-slider-left a img:hover
+            transform: scale(1.1)
+            transition: .4s ease-in-out
+
+        &-slider-bottom img:hover
+            transform: scale(1.2)
+            transition: .4s ease-in-out
+
+        &-slider-bottom img:sec
+            transform: scale(1.2)
+            transition: .4s ease-in-out
+
+        &-footer
+            grid-area: footer
+            text-align: center
+
+        &-footer p:first-child
+            margin: 0 auto
+            width: 627px
+            height: 38px
+            background: url("../img/month-of-study/month-of-study-grid-footer-bg.png") center no-repeat
+            background-size: cover
+            margin: 30px auto
+
+        &-footer p:nth-child(2)
+            +semi-bold
+            font-size: 26px
+            color: #ffffff
+
+        &-footer p:nth-child(3)
+            +regular
+            font-size: 18px
+            color: #bcc1cc
+
+        &-btn
+            grid-area: btn
+            @extend .button-size-2
+            @extend .button-orange
+            margin: 0 auto

@@ -1,0 +1,127 @@
+.choose
+    background: url("../img/choose/choose-bg.png") no-repeat
+    background-size: cover
+    background-position: 54% 50%
+
+.choose-wrap
+    width: 1140px
+    margin: 0 auto
+    padding-top: 144px
+
+    .choose-grid
+        margin: 0 auto
+        align-items: center
+        text-align: center
+        margin: auto
+        display: grid
+        grid-template-areas: "header header" "filter filter" "info info" "btn btn"
+        grid-template-rows: 1fr 1fr 2fr 1fr
+        grid-template-columns: 1fr 1fr
+        grid-gap: 5px
+
+        &-header
+            grid-area: header
+            +bold
+            font-size: 65px
+            color: #ffffff
+            margin-bottom: 30px
+
+        &-header span:last-child
+            color: #fa9300
+
+        &-filter
+            height: 110px
+            grid-area: filter
+            display: flex
+            flex-flow: row wrap
+            justify-content: center
+            align-content: space-between
+            margin-bottom: 50px
+
+        &-filter > div
+            margin: 4px
+
+        &-filter div:hover
+            transform: scale(1.05)
+            transition: .4s ease-in-out   
+
+        &-info
+            grid-area: info
+            display: flex
+            justify-content: space-around
+
+        &-info-left
+
+        &-info-left-text
+            text-align: left
+            margin-bottom: 30px
+
+        &-info-left-link
+          display: flex
+          align-items: center
+
+        &-info-left-link a
+            display: flex
+            align-items: center
+            text-decoration: none
+
+        &-info-left-link a:hover
+            transform: scale(1.05)
+            transition: .4s ease-in-out    
+
+        &-info-left-link a p
+            +semi-bold
+            height: min-content
+            font-size: 18px
+            color: #fa9300
+            border-bottom: 1px solid #fa9300
+
+        &--info-rigth
+            
+        &-info-slider
+            margin-top: 20px
+            display: flex
+            justify-content: center
+
+        &-info-slider-main
+            width: 557px
+            height: 380px
+            background: url("../img/choose/choose-slider-photo.png") center no-repeat, url("../img/choose/choose-slider-frame.png") center no-repeat
+            background-size: cover
+
+        &-info-slider-left
+            margin-right: -45px
+            margin-top: 25%
+            
+        &-info-slider-right
+            margin-left: -68px
+            margin-top: 25%
+
+        &-info-slider-right a img:hover,
+        &-info-slider-left a img:hover
+            transform: scale(1.1)
+            transition: .4s ease-in-out
+
+        &-info-slider-bottom
+            margin-top: -55px
+
+        &-info-slider-bottom img
+            vertical-align: middle
+
+        &-info-slider-bottom a:nth-child(2n) img:hover
+            transform: scale(1.7)
+            transition: .4s ease-in-out
+
+        &-info-slider-bottom a:nth-child(3) img:hover
+            transform: scale(1.7)
+            transition: .4s ease-in-out
+
+        &-info-slider-bottom img:sec
+            transform: scale(1.2)
+            transition: .4s ease-in-out
+
+        &-btn
+            grid-area: btn
+            @extend .button-size-2
+            @extend .button-orange
+            margin: 0 auto 90px

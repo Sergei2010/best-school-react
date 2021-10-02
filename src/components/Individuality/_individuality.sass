@@ -1,0 +1,90 @@
+.individuality
+    background: url("../img/individuality/individuality-bg.png") center no-repeat
+    background-size: cover
+
+.individuality-wrap
+    width: 1140px
+    margin: 0 auto
+    padding-top: 34px
+
+    .individuality-grid
+        margin: 0 auto
+        align-items: center
+        text-align: center
+        margin: auto
+        display: grid
+        grid-template-areas: "info info"
+        grid-template-rows: 1fr
+        grid-template-columns: 1fr 1fr
+        grid-gap: 5px
+
+        &-info
+            grid-area: info
+            display: flex
+            justify-content: space-around
+
+        &-info-slider
+            margin-top: 20px
+            display: flex
+            justify-content: center
+
+        &-info-slider-main
+            width: 600px
+            height: 433px
+            background: url("../img/individuality/individuality-slider-bg.png") center no-repeat
+            background-size: cover
+
+        &-info-slider-left
+            margin-right: -3%
+            margin-top: 25%
+            
+        &-info-slider-right
+            margin-left: -3%
+            margin-top: 25%
+
+        &-info-slider-right a img:hover,
+        &-info-slider-left a img:hover
+            transform: scale(1.1)
+            transition: .4s ease-in-out
+
+        &-info-slider-bottom
+            margin-top: -45px
+
+        &-info-slider-bottom img
+            vertical-align: middle
+
+        &-info-slider-bottom a:nth-child(2n) img:hover
+            transform: scale(1.7)
+            transition: .4s ease-in-out
+
+        &-info-slider-bottom a:nth-child(3) img:hover
+            transform: scale(1.7)
+            transition: .4s ease-in-out
+
+        &-info-slider-bottom img:sec
+            transform: scale(1.2)
+            transition: .4s ease-in-out
+
+        &-info-right-text
+            text-align: left
+            margin-top: 25%
+
+        &-info-right-text p:first-child
+            +bold
+            font-size: 36px
+            margin: 0
+            color: #7cbcf3
+
+        &-info-right-text p:nth-child(2)
+            +semi-bold
+            font-size: 18px
+            letter-spacing: 0.1em
+            margin: 0
+            color: #3e3e3e
+
+        &-info-right-text p
+            +regular
+            font-size: 18px
+            margin-top: 30px
+            margin-bottom: 0
+            color: #808080

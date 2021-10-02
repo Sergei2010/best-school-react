@@ -1,0 +1,46 @@
+.video
+    height: 865px
+    +regular
+    font-size: 21px
+    color: #353535
+    display: flex
+    text-align: center
+    align-items: center
+    background: url("../img/video/video-bg.png") center no-repeat
+    background-size: cover
+
+    &-wrap
+        margin: 0 auto
+
+    &-wrap-cloud
+        width: 940px
+        height: 330px
+        display: flex
+        text-align: center
+        align-items: center
+        background: url("../img/video/video-cloud.png") no-repeat
+        background-size: cover
+        background-position: 0 -100%
+
+
+    &-cloud
+        margin: auto
+
+    &-btn a
+        display: flex
+        justify-content: center
+        align-items: center
+        text-decoration: none;
+        text-align: left
+
+    &-btn a:hover
+        transform: scale(1.05)
+        transition: .4s ease-in-out  
+
+    &-text div
+        display: inline-block
+        max-width: 100%
+        margin: 0
+        border-bottom: 2px solid #eb8d07;
+        padding-bottom: 1px;
+        color: #eb8d07

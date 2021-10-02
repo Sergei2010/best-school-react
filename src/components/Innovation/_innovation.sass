@@ -1,0 +1,111 @@
+.innovation
+    background: url("../img/innovation/innovation-bg.png") center no-repeat
+    background-size: cover
+
+.innovation-wrap
+    width: 1140px
+    margin: 0 auto
+    padding-top: 144px
+
+    .innovation-grid
+        margin: 0 auto
+        align-items: center
+        text-align: center
+        margin: auto
+        display: grid
+        grid-template-areas: "header header" "info info" "btn btn"
+        grid-template-rows: 1fr 2fr 1fr
+        grid-template-columns: 1fr 1fr
+        grid-gap: 5px
+
+        &-header
+            grid-area: header
+            +bold
+            font-size: 65px
+            margin-bottom: 60px
+
+        &-header p:first-child
+            margin: 0
+            color: #fa9300
+
+        &-header p
+            color: #ffffff
+            margin: 0
+
+        &-info
+            grid-area: info
+            display: flex
+            justify-content: space-around
+
+        &-info-left-text
+            text-align: left
+            margin-top: 25%
+            color: #ffffff
+
+        &-info-left-text p:first-child
+            +bold
+            font-size: 36px
+            margin: 0
+
+        &-info-left-text p:nth-child(2)
+            +semi-bold
+            font-size: 18px
+            letter-spacing: 0.1em
+            margin: 0
+
+        &-info-left-text p
+            +regular
+            font-size: 18px
+            margin-top: 30px
+            margin-bottom: 0
+
+        &-info-left-link
+          display: flex
+          align-items: center
+
+        &-info-slider
+            margin-top: 20px
+            display: flex
+            justify-content: center
+
+        &-info-slider-main
+            width: 557px
+            height: 380px
+            background: url("../img/innovation/innovation-slider-photo.png") center no-repeat, url("../img/innovation/innovation-slider-frame.png") center no-repeat
+            background-size: 86% 86%, cover
+
+        &-info-slider-left
+            margin-right: -3%
+            margin-top: 25%
+            
+        &-info-slider-right
+            margin-left: -3%
+            margin-top: 25%
+
+        &-info-slider-right a img:hover,
+        &-info-slider-left a img:hover
+            transform: scale(1.1)
+            transition: .4s ease-in-out
+
+        &-info-slider-bottom img
+            vertical-align: middle
+
+        &-info-slider-bottom a:nth-child(2n) img:hover
+            transform: scale(1.7)
+            transition: .4s ease-in-out
+
+        &-info-slider-bottom a:nth-child(3) img:hover
+            transform: scale(1.7)
+            transition: .4s ease-in-out
+
+        &-info-slider-bottom img:sec
+            transform: scale(1.2)
+            transition: .4s ease-in-out
+
+        &-btn
+            grid-area: btn
+            margin-bottom: 120px
+
+        &-btn:hover
+            transform: scale(1.05)
+            transition: .4s ease-in-out    
